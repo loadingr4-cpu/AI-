@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ボイス伝言メモ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ボイス伝言メモ</h1>
+    <p class="subtitle">話した内容を保存して、あとでまとめて確認できます</p>
+  </header>
+
+  <main>
+    <section class="recorder card">
+      <div class="recorder-controls">
+        <button id="micBtn" class="mic-btn">🎤 録音開始</button>
+        <span id="micStatus" class="status"></span>
+      </div>
+      <textarea id="transcript" placeholder="ここに音声の文字起こしが表示されます（編集もできます）" rows="4"></textarea>
+      <div class="actions">
+        <button id="saveBtn" class="primary-btn">この内容を保存</button>
+        <button id="clearBtn" class="ghost-btn">クリア</button>
+      </div>
+      <p id="unsupportedNotice" class="notice hidden">
+        お使いのブラウザは音声入力（Web Speech API）に対応していません。Google Chromeでの利用をおすすめします。テキストを直接入力して保存することもできます。
+      </p>
+    </section>
+
+    <section class="summary card">
+      <div class="summary-header">
+        <h2>要約</h2>
+        <button id="summarizeBtn" class="primary-btn">選択した伝言を要約する</button>
+      </div>
+      <div id="summaryResult" class="summary-result"></div>
+    </section>
+
+    <section class="history card">
+      <div class="history-header">
+        <h2>保存した伝言一覧</h2>
+        <label class="select-all">
+          <input type="checkbox" id="selectAll"> すべて選択
+        </label>
+      </div>
+      <ul id="messageList" class="message-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

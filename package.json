@@ -1,0 +1,12 @@
+{
+  "name": "voice-memo-app",
+  "version": "1.0.0",
+  "description": "音声で入力した伝言メモを保存・要約するウェブアプリ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
