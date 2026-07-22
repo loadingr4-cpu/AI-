@@ -38,9 +38,10 @@ def main():
     report_path = generate_report()
     print(f"レポート生成: {report_path}")
 
-    if not args.no_email:
-        from emailer import send_report
-        send_report(report_path)
+    from drive_uploader import upload_report
+    drive_url = upload_report(report_path)
+    if drive_url:
+        print(f"ドライブURL: {drive_url}")
 
     print("\n=== 完了 ===")
     return 0

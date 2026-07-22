@@ -1,5 +1,6 @@
 node_modules/
 competitor-survey/.env
+competitor-survey/credentials.json
 competitor-survey/__pycache__/
 competitor-survey/*.pyc
 
