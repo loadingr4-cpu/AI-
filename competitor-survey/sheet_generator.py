@@ -80,15 +80,19 @@ def generate_csv(
     # ── 塾別詳細一覧 ──
     w.writerow(["▼ 塾別詳細一覧"])
     w.writerow([
-        "塾名", "指導形態", "時給（下限）", "時給（上限）",
+        "塾名", "自社/競合", "指導形態",
+        "時給・最頻値", "時給・最低", "時給・最高",
         "コマ給", "コマ時間（分）", "雇用形態", "対象学年",
-        "福利厚生", "備考", "参照URL",
+        "福利厚生", "備考（大阪府内地域差など）", "参照URL",
     ])
     for s in schools:
         benefits = "／".join(s.get("benefits") or [])
+        label = "◎自社" if s.get("is_own_company") else "競合"
         w.writerow([
             s.get("name", ""),
+            label,
             s.get("teaching_format", ""),
+            s.get("hourly_pay_mode") or "",
             s.get("hourly_pay_min") or "",
             s.get("hourly_pay_max") or "",
             s.get("session_pay") or "",
