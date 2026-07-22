@@ -1,6 +1,7 @@
 {
   "survey_date": "2026-07-22",
   "surveyed_by": "claude-sonnet-4-6",
+  "survey_region": "大阪市（大阪府）",
   "schools": [
     {
       "name": "アップ学習会",
@@ -14,8 +15,8 @@
       "benefits": ["交通費支給", "昇給あり", "社員登用あり", "制服貸与"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://jp.indeed.com/",
-      "notes": "個別館ブランド。コマ給制：1コマ90分2,400〜4,200円"
+      "source_url": "https://www.juku.st/brand/632",
+      "notes": "個別館ブランド。コマ給制：1コマ90分3,000円〜"
     },
     {
       "name": "明光義塾",
@@ -24,13 +25,13 @@
       "hourly_pay_min": 1200,
       "hourly_pay_max": 1900,
       "hourly_pay_mode": 1400,
-      "session_pay": null,
+      "session_pay": 1850,
       "session_minutes": 95,
       "benefits": ["交通費支給（上限10,000円）", "昇給あり", "社会保険完備"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://jp.indeed.com/",
-      "notes": "大阪府内30店舗以上。大阪市で時給1,900円〜の求人あり"
+      "source_url": "https://www.juku.st/classrooms/119",
+      "notes": "大阪市内30店舗以上。1コマ95分1,850円+前後手当510円（合計2,360円/105分≒1,349円/時）。大阪市内で時給1,900円〜の求人あり"
     },
     {
       "name": "個別指導Axis",
@@ -39,28 +40,28 @@
       "hourly_pay_min": 1335,
       "hourly_pay_max": 1700,
       "hourly_pay_mode": 1500,
-      "session_pay": null,
+      "session_pay": 1780,
       "session_minutes": 80,
       "benefits": ["交通費支給", "制服貸与", "昇給あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://jp.indeed.com/",
-      "notes": "完全1:2指導"
+      "source_url": "https://jukunavi.com/job/axis/osaka/",
+      "notes": "完全1:2指導。大阪本部1コマ80分1,780円〜、梅田校1,700円〜"
     },
     {
       "name": "個別指導塾スタンダード",
       "is_own_company": false,
       "teaching_format": "1:3",
-      "hourly_pay_min": 1050,
-      "hourly_pay_max": 1350,
-      "hourly_pay_mode": 1200,
-      "session_pay": null,
-      "session_minutes": 80,
+      "hourly_pay_min": null,
+      "hourly_pay_max": null,
+      "hourly_pay_mode": null,
+      "session_pay": 1350,
+      "session_minutes": 75,
       "benefits": ["交通費支給"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://standard-ac.jp/teacher/",
-      "notes": "大阪府内の求人情報が少ない"
+      "source_url": "https://jukunavi.com/job/standard/aeontownhirano/",
+      "notes": "大阪市内の求人情報が少ない。平野教室（大阪市平野区）1コマ75分1,350〜1,600円。時給ベースの詳細は要確認（コマ給単純換算では最低賃金割れの可能性あり）"
     },
     {
       "name": "個別指導WAM",
@@ -69,13 +70,13 @@
       "hourly_pay_min": 1200,
       "hourly_pay_max": 1700,
       "hourly_pay_mode": 1400,
-      "session_pay": null,
+      "session_pay": 2100,
       "session_minutes": 90,
       "benefits": ["交通費支給", "昇給あり", "社員登用あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高・浪人",
-      "source_url": "https://www.e-wam.jp/",
-      "notes": "大阪府内42件求人。給与は店舗により異なる"
+      "source_url": "https://www.juku.st/classroom/28528",
+      "notes": "大阪市内40件以上求人。上本町駅前校：1コマ90分2,100〜5,000円。給与は店舗により異なる"
     },
     {
       "name": "個別指導学院ヒーローズ",
@@ -84,13 +85,13 @@
       "hourly_pay_min": null,
       "hourly_pay_max": null,
       "hourly_pay_mode": null,
-      "session_pay": 2000,
-      "session_minutes": 80,
+      "session_pay": 1935,
+      "session_minutes": 90,
       "benefits": ["交通費支給", "昇給あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://heroes-t.net/recruit/",
-      "notes": "コマ給制。1コマ（80分）2,000〜2,016円"
+      "source_url": "https://www.juku.st/job/100271",
+      "notes": "コマ給制。1コマ90分1,935円（研修後）。大阪市内の直接求人は少なく近隣エリア参考"
     },
     {
       "name": "個別教室のトライ",
@@ -105,7 +106,7 @@
       "employment_type": "業務委託",
       "target_grades": "小・中・高・大学受験",
       "source_url": "https://www.trygroup.co.jp/recruit/",
-      "notes": "完全1:1マンツーマン。業務委託"
+      "notes": "完全1:1マンツーマン。業務委託（個人事業主扱い）"
     },
     {
       "name": "個別指導学院フリーステップ",
@@ -114,13 +115,13 @@
       "hourly_pay_min": 1200,
       "hourly_pay_max": 1880,
       "hourly_pay_mode": 1410,
-      "session_pay": 1880,
+      "session_pay": 2180,
       "session_minutes": 80,
       "benefits": ["交通費支給", "制服貸与", "昇給制度あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.hamasemi.com/freestep/",
-      "notes": "浜学園グループ。1コマ80分1,880〜3,570円（手当含む）"
+      "source_url": "https://jukunavi.com/job/seigakusya/nishitanabe/",
+      "notes": "浜学園グループ。大阪市西田辺校：1コマ80分2,180〜3,570円（前後手当500円含む）"
     },
     {
       "name": "東進個別指導学院",
@@ -134,8 +135,8 @@
       "benefits": ["交通費支給", "昇給あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.toshinkobetsu.jp/teacher/",
-      "notes": "大阪府内の具体的求人情報が少ない"
+      "source_url": "https://jukunavi.com/g/toshineiseiyobiko/",
+      "notes": "大阪市内の具体的求人情報が少ない。参考値を掲載"
     },
     {
       "name": "ITTO個別指導学院",
@@ -144,28 +145,28 @@
       "hourly_pay_min": 1200,
       "hourly_pay_max": 1620,
       "hourly_pay_mode": 1300,
-      "session_pay": 1720,
-      "session_minutes": 80,
+      "session_pay": 1950,
+      "session_minutes": 90,
       "benefits": ["交通費支給", "昇給あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.itto.jp/teacher/",
-      "notes": "中学生1コマ80分1,720円〜、高校生1コマ80分2,160円〜"
+      "source_url": "https://jukunavi.com/job/wits/suitaizumi/",
+      "notes": "吹田市のデータ参考（大阪市内の掲載少ない）。1コマ90分1,950〜2,550円"
     },
     {
       "name": "ファロス個別指導学院",
       "is_own_company": false,
       "teaching_format": "1:2",
-      "hourly_pay_min": 1120,
-      "hourly_pay_max": 1263,
-      "hourly_pay_mode": 1200,
-      "session_pay": 1680,
+      "hourly_pay_min": null,
+      "hourly_pay_max": null,
+      "hourly_pay_mode": null,
+      "session_pay": 1825,
       "session_minutes": 90,
       "benefits": ["交通費支給", "昇給あり（年2回以上）"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.daiichisemi.net/jinzai/requirement_pharos.php",
-      "notes": "第一ゼミナール系列。コマ給1,680〜1,895円（80分授業+前後対応）"
+      "source_url": "https://jukunavi.com/job/with-us/tamaidekimae/",
+      "notes": "第一ゼミナール系列。大阪市玉出教室：1コマ90分1,825〜2,045円。阿波座校最高2,045円"
     },
     {
       "name": "スクールIE",
@@ -174,43 +175,43 @@
       "hourly_pay_min": 1364,
       "hourly_pay_max": 2000,
       "hourly_pay_mode": 1500,
-      "session_pay": 2046,
+      "session_pay": 1830,
       "session_minutes": 90,
       "benefits": ["交通費支給", "昇給あり（年1回以上）", "研修制度あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.schoolie-net.jp/teacher/",
-      "notes": "やる気スイッチグループ。担任制個別指導。コマ給2,046〜3,000円（90分）"
+      "source_url": "https://www.juku.st/brand/22",
+      "notes": "やる気スイッチグループ。担任制個別指導。1コマ90分1,830〜1,995円（関西圏参考）"
     },
     {
       "name": "トライプラス",
       "is_own_company": false,
       "teaching_format": "1:2",
-      "hourly_pay_min": 1450,
-      "hourly_pay_max": 1700,
-      "hourly_pay_mode": 1550,
+      "hourly_pay_min": 1200,
+      "hourly_pay_max": 1420,
+      "hourly_pay_mode": 1300,
       "session_pay": null,
       "session_minutes": 80,
       "benefits": ["交通費支給", "昇給あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.trygroup.co.jp/tryplus/",
-      "notes": "コマ時間60〜90分（相談制）"
+      "source_url": "https://jukunavi.com/g/kobetsushidojukutryplus/",
+      "notes": "時給制。1,200〜1,420円。コマ時間60〜90分（相談制）"
     },
     {
       "name": "ゴールフリー",
       "is_own_company": false,
       "teaching_format": "1:1〜1:2",
-      "hourly_pay_min": 1125,
-      "hourly_pay_max": 2250,
-      "hourly_pay_mode": 1500,
-      "session_pay": 1600,
+      "hourly_pay_min": null,
+      "hourly_pay_max": null,
+      "hourly_pay_mode": null,
+      "session_pay": 1700,
       "session_minutes": 80,
       "benefits": ["交通費支給", "昇給あり（年2回）"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.goalfree.jp/",
-      "notes": "1コマ80分。1:2は1,600〜3,000円、1:1は1,500〜3,000円"
+      "source_url": "https://www.juku.st/job/4193",
+      "notes": "上本町（大阪市）教室あり。1:2→1コマ80分1,700〜3,100円"
     },
     {
       "name": "関西個別指導学院",
@@ -219,13 +220,13 @@
       "hourly_pay_min": 1200,
       "hourly_pay_max": 1760,
       "hourly_pay_mode": 1400,
-      "session_pay": 1600,
+      "session_pay": 1950,
       "session_minutes": 80,
       "benefits": ["交通費支給", "昇給あり", "体験授業成功手当あり（3,000円/回）"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://baito.mynavi.jp/brand/brand-490/",
-      "notes": "ベネッセコーポレーショングループ。コマ給1,573〜1,600円（80分）"
+      "source_url": "https://jukunavi.com/job/tkg/tennoji/",
+      "notes": "ベネッセグループ。天王寺校（大阪市）あり。1コマ80分1,950〜3,300円（手当450円含む）"
     },
     {
       "name": "京進スクールONE",
@@ -234,13 +235,13 @@
       "hourly_pay_min": 1328,
       "hourly_pay_max": 1568,
       "hourly_pay_mode": 1400,
-      "session_pay": 1770,
-      "session_minutes": 80,
+      "session_pay": 1950,
+      "session_minutes": 90,
       "benefits": ["交通費支給", "昇給あり"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.schoolone.jp/teacher/",
-      "notes": "1コマ（80分）1,770〜2,090円"
+      "source_url": "https://jukunavi.com/job/kyoshin/hanshinnoda/",
+      "notes": "阪神野田校（大阪市福島区）1コマ90分1,950〜2,550円"
     },
     {
       "name": "第一ゼミナール",
@@ -249,13 +250,13 @@
       "hourly_pay_min": 1750,
       "hourly_pay_max": 2150,
       "hourly_pay_mode": 1800,
-      "session_pay": 1680,
-      "session_minutes": 80,
+      "session_pay": 1825,
+      "session_minutes": 90,
       "benefits": ["交通費支給", "昇給あり（年3回以上）", "業務準備手当あり（150円/日）"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.daiichisemi.net/jinzai/",
-      "notes": "授業給1,680円+前後手当500円。採用テスト優遇で時給2,150円"
+      "source_url": "https://jukunavi.com/job/with-us/uehommachi/",
+      "notes": "上本町校（大阪市）あり。1コマ90分1,825〜2,395円。採用テスト優遇で時給2,150円"
     },
     {
       "name": "KEC個別指導メビウス",
@@ -269,8 +270,8 @@
       "benefits": ["交通費支給"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.kec.ne.jp/",
-      "notes": "定期テスト対策特化。1コマ90〜100分。大阪府内の具体的給与情報少ない"
+      "source_url": "https://www.juku.st/brand/966",
+      "notes": "定期テスト対策特化。1コマ90〜100分。大阪市内の具体的給与情報少ない"
     },
     {
       "name": "キャンパス",
@@ -279,13 +280,13 @@
       "hourly_pay_min": 1185,
       "hourly_pay_max": 1500,
       "hourly_pay_mode": 1300,
-      "session_pay": 1580,
+      "session_pay": 1600,
       "session_minutes": 80,
       "benefits": ["交通費支給", "昇給あり（年2回）"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.jukukoushi.jp/perm/chain_list/nCDLPRU5/27/",
-      "notes": "1コマ80分1,580〜2,000円"
+      "source_url": "https://jukunavi.com/job/canpass/tamatsukuri/",
+      "notes": "玉造校（大阪市）1コマ80分1,600円"
     },
     {
       "name": "まなび",
@@ -294,28 +295,28 @@
       "hourly_pay_min": null,
       "hourly_pay_max": null,
       "hourly_pay_mode": null,
-      "session_pay": null,
+      "session_pay": 1300,
       "session_minutes": 60,
       "benefits": ["交通費支給"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.manabi-recruit.info/part/",
-      "notes": "MANABI GROUP。完全1:2個別指導。1コマ60分。具体的給与情報少ない"
+      "source_url": "https://www.juku.st/reviews/brand/340",
+      "notes": "MANABI GROUP。完全1:2個別指導。1コマ60分1,300〜1,800円"
     },
     {
       "name": "まなびプラス",
       "is_own_company": false,
       "teaching_format": "1:3〜1:4",
-      "hourly_pay_min": 1088,
-      "hourly_pay_max": 1437,
-      "hourly_pay_mode": 1200,
+      "hourly_pay_min": null,
+      "hourly_pay_max": null,
+      "hourly_pay_mode": null,
       "session_pay": 1450,
       "session_minutes": 80,
       "benefits": ["交通費支給", "授業準備給あり（+50円/コマ）"],
       "employment_type": "アルバイト",
       "target_grades": "小・中・高",
-      "source_url": "https://www.manabi-recruit.info/part/",
-      "notes": "MANABI GROUP。自立式個別指導1:3〜4。コマ給1,450〜1,916円"
+      "source_url": "https://www.juku.st/classroom/24930",
+      "notes": "MANABI GROUP。自立式個別指導1:3〜4。大阪市内データ限られる（大阪府高石市等で確認）。コマ給単純換算では最低賃金割れの可能性あり、要確認"
     }
   ]
 }
