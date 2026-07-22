@@ -1,0 +1,52 @@
+{
+  "survey_date": "2026-06-01",
+  "schools": [
+    {
+      "name": "明光義塾",
+      "teaching_format": "1:2",
+      "hourly_pay_min": 1150,
+      "hourly_pay_max": 1500,
+      "session_pay": null,
+      "session_minutes": 90,
+      "benefits": [
+        "交通費支給（上限10,000円）",
+        "昇給あり"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": ""
+    },
+    {
+      "name": "個別指導Axis",
+      "teaching_format": "1:3",
+      "hourly_pay_min": 1200,
+      "hourly_pay_max": 1600,
+      "session_pay": null,
+      "session_minutes": 80,
+      "benefits": [
+        "交通費支給",
+        "制服貸与"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": ""
+    },
+    {
+      "name": "個別指導塾スタンダード",
+      "teaching_format": "1:3",
+      "hourly_pay_min": 1100,
+      "hourly_pay_max": 1400,
+      "session_pay": null,
+      "session_minutes": 80,
+      "benefits": [
+        "交通費支給"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": ""
+    }
+  ]
+}

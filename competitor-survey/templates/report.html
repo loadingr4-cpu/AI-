@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>競合他塾 講師求人調査レポート {{ year }}年{{ month }}月</title>
+<style>
+  :root {
+    --brand: #1a5fa8;
+    --brand-light: #e8f0fb;
+    --up: #1a8f4e;
+    --down: #c0392b;
+    --neutral: #555;
+    --border: #d0d7de;
+    --bg: #f6f8fa;
+    --radius: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Hiragino Sans", "Yu Gothic", sans-serif; background: var(--bg); color: #24292f; line-height: 1.6; }
+
+  header { background: var(--brand); color: #fff; padding: 24px 32px; }
+  header h1 { font-size: 1.4rem; font-weight: 700; }
+  header p { font-size: 0.85rem; opacity: 0.85; margin-top: 4px; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+  section { margin-bottom: 32px; }
+  section h2 { font-size: 1.1rem; font-weight: 700; color: var(--brand); border-left: 4px solid var(--brand); padding-left: 10px; margin-bottom: 14px; }
+
+  /* summary cards */
+  .cards { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; flex: 1; min-width: 150px; }
+  .card .label { font-size: 0.75rem; color: var(--neutral); }
+  .card .value { font-size: 1.5rem; font-weight: 700; color: var(--brand); }
+
+  /* changes banner */
+  .changes-list { list-style: none; }
+  .changes-list li { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 8px; font-size: 0.9rem; }
+  .changes-list li .badge { display: inline-block; border-radius: 4px; padding: 1px 8px; font-size: 0.75rem; font-weight: 700; margin-right: 8px; }
+  .badge.up   { background: #d4edda; color: var(--up); }
+  .badge.down { background: #f8d7da; color: var(--down); }
+  .badge.chg  { background: #fff3cd; color: #856404; }
+  .badge.new  { background: var(--brand-light); color: var(--brand); }
+
+  /* main table */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.08); font-size: 0.88rem; }
+  th { background: var(--brand); color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; white-space: nowrap; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--brand-light); }
+  .pay { font-weight: 700; }
+  .change-up   { color: var(--up);   font-weight: 700; }
+  .change-down { color: var(--down); font-weight: 700; }
+  .change-chg  { color: #856404;    font-weight: 700; }
+  .no-data { color: #aaa; font-style: italic; }
+  .benefits-list { display: flex; flex-wrap: wrap; gap: 4px; }
+  .benefit-tag { background: var(--brand-light); color: var(--brand); border-radius: 4px; padding: 1px 7px; font-size: 0.78rem; }
+
+  footer { text-align: center; font-size: 0.78rem; color: #aaa; padding: 24px; }
+
+  @media print {
+    header { background: #fff; color: #000; border-bottom: 2px solid var(--brand); }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>競合他塾 講師求人調査レポート</h1>
+  <p>{{ year }}年{{ month }}月 ／ 調査日: {{ survey_date }} ／ 対象: 関西圏 個別指導塾</p>
+</header>
+
+<main>
+
+  <!-- サマリーカード -->
+  <section>
+    <div class="cards">
+      <div class="card">
+        <div class="label">調査塾数</div>
+        <div class="value">{{ total_schools }}</div>
+      </div>
+      <div class="card">
+        <div class="label">最高時給</div>
+        <div class="value">{{ max_pay }}円</div>
+      </div>
+      <div class="card">
+        <div class="label">最低時給</div>
+        <div class="value">{{ min_pay }}円</div>
+      </div>
+      <div class="card">
+        <div class="label">前月比変更数</div>
+        <div class="value">{{ change_count }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 前月からの変更 -->
+  {% if changes %}
+  <section>
+    <h2>前月からの変更点</h2>
+    <ul class="changes-list">
+      {% for c in changes %}
+      <li>
+        <span class="badge {{ c.type }}">{{ c.type_label }}</span>
+        <strong>{{ c.school }}</strong>：{{ c.detail }}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <!-- 詳細テーブル -->
+  <section>
+    <h2>塾別詳細一覧</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>塾名</th>
+            <th>指導形態</th>
+            <th>時給（下限〜上限）</th>
+            <th>コマ給</th>
+            <th>コマ時間</th>
+            <th>福利厚生</th>
+            <th>前月比</th>
+            <th>備考</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+          <tr>
+            <td><strong>{{ row.name }}</strong></td>
+            <td>{{ row.teaching_format or '<span class="no-data">不明</span>' }}</td>
+            <td class="pay">
+              {% if row.hourly_pay_min or row.hourly_pay_max %}
+                {{ row.hourly_pay_min or '?' }}〜{{ row.hourly_pay_max or '?' }}円
+              {% else %}
+                <span class="no-data">—</span>
+              {% endif %}
+            </td>
+            <td class="pay">
+              {% if row.session_pay %}{{ row.session_pay }}円{% else %}<span class="no-data">—</span>{% endif %}
+            </td>
+            <td>
+              {% if row.session_minutes %}{{ row.session_minutes }}分{% else %}<span class="no-data">—</span>{% endif %}
+            </td>
+            <td>
+              {% if row.benefits %}
+              <div class="benefits-list">
+                {% for b in row.benefits %}
+                <span class="benefit-tag">{{ b }}</span>
+                {% endfor %}
+              </div>
+              {% else %}
+              <span class="no-data">—</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if row.change_summary %}
+              <span class="change-{{ row.change_type }}">{{ row.change_summary }}</span>
+              {% else %}
+              <span class="no-data">変化なし</span>
+              {% endif %}
+            </td>
+            <td style="font-size:0.82rem; color:#555;">{{ row.notes or '' }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  アップ学習会 競合調査システム ／ 自動生成 ／ {{ survey_date }}
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+{
+  "survey_date": "2026-07-22",
+  "schools": [
+    {
+      "name": "明光義塾",
+      "teaching_format": "1:2",
+      "hourly_pay_min": 1200,
+      "hourly_pay_max": 1600,
+      "session_pay": null,
+      "session_minutes": 90,
+      "benefits": [
+        "交通費支給（上限10,000円）",
+        "昇給あり",
+        "社会保険完備"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": "大阪府内30店舗"
+    },
+    {
+      "name": "個別指導Axis",
+      "teaching_format": "1:4",
+      "hourly_pay_min": 1200,
+      "hourly_pay_max": 1600,
+      "session_pay": null,
+      "session_minutes": 80,
+      "benefits": [
+        "交通費支給",
+        "制服貸与"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": "1:3→1:4に変更"
+    },
+    {
+      "name": "個別指導塾スタンダード",
+      "teaching_format": "1:3",
+      "hourly_pay_min": 1050,
+      "hourly_pay_max": 1350,
+      "session_pay": null,
+      "session_minutes": 80,
+      "benefits": [
+        "交通費支給"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": ""
+    },
+    {
+      "name": "個別指導WAM",
+      "teaching_format": "1:2",
+      "hourly_pay_min": 1300,
+      "hourly_pay_max": 1700,
+      "session_pay": null,
+      "session_minutes": 90,
+      "benefits": [
+        "交通費支給",
+        "昇給あり",
+        "社員登用あり"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高・浪人",
+      "source_url": "https://jp.indeed.com/",
+      "notes": ""
+    },
+    {
+      "name": "個別指導学院ヒーローズ",
+      "teaching_format": "1:2",
+      "hourly_pay_min": null,
+      "hourly_pay_max": null,
+      "session_pay": 1500,
+      "session_minutes": 90,
+      "benefits": [
+        "交通費支給"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": "コマ給制"
+    },
+    {
+      "name": "個別教室のトライ",
+      "teaching_format": "1:1",
+      "hourly_pay_min": 1500,
+      "hourly_pay_max": 2500,
+      "session_pay": null,
+      "session_minutes": 75,
+      "benefits": [
+        "交通費全額支給",
+        "Web研修制度"
+      ],
+      "employment_type": "業務委託",
+      "target_grades": "小・中・高・大学受験",
+      "source_url": "https://jp.indeed.com/",
+      "notes": "業務委託"
+    },
+    {
+      "name": "個別指導学院フリーステップ",
+      "teaching_format": "1:2",
+      "hourly_pay_min": 1200,
+      "hourly_pay_max": 1500,
+      "session_pay": null,
+      "session_minutes": 90,
+      "benefits": [
+        "交通費支給",
+        "制服貸与",
+        "昇給制度あり"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": "浜学園グループ"
+    },
+    {
+      "name": "東進個別指導学院",
+      "teaching_format": "1:2",
+      "hourly_pay_min": 1200,
+      "hourly_pay_max": 1600,
+      "session_pay": null,
+      "session_minutes": 80,
+      "benefits": [
+        "交通費支給",
+        "昇給あり"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": ""
+    },
+    {
+      "name": "ITTO個別指導学院",
+      "teaching_format": "1:2",
+      "hourly_pay_min": 1100,
+      "hourly_pay_max": 1400,
+      "session_pay": null,
+      "session_minutes": 80,
+      "benefits": [
+        "交通費支給"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中・高",
+      "source_url": "https://jp.indeed.com/",
+      "notes": ""
+    },
+    {
+      "name": "学研個別指導教室",
+      "teaching_format": "1:1",
+      "hourly_pay_min": 1000,
+      "hourly_pay_max": 1300,
+      "session_pay": null,
+      "session_minutes": 60,
+      "benefits": [
+        "交通費支給"
+      ],
+      "employment_type": "アルバイト",
+      "target_grades": "小・中",
+      "source_url": "https://jp.indeed.com/",
+      "notes": ""
+    }
+  ]
+}
