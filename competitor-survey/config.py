@@ -37,7 +37,7 @@ COMPETITORS = [
         "name": "個別指導学院ヒーローズ",
         "search_keywords": ["個別指導学院ヒーローズ 講師 大阪市", "ヒーローズ 塾講師 バイト 大阪市 時給"],
         "recruitment_url": "https://heros.fuerubooubo.com/",
-        "source_urls": ["https://www.juku.st/job/100271"],
+        "source_urls": [],  # job IDは失効するためPhase2のweb_searchに委ねる
     },
     {
         "name": "個別教室のトライ",
@@ -61,7 +61,7 @@ COMPETITORS = [
         "name": "ITTO個別指導学院",
         "search_keywords": ["ITTO個別指導学院 講師 大阪市", "ITTO 塾講師 バイト 大阪市 時給"],
         "recruitment_url": "https://www.itto.jp/teacher/",
-        "source_urls": ["https://jukunavi.com/job/wits/suitaizumi/"],
+        "source_urls": [],  # 吹田市（大阪市外）のためPhase2のweb_searchに委ねる
     },
     {
         "name": "ファロス個別指導学院",
@@ -85,7 +85,7 @@ COMPETITORS = [
         "name": "ゴールフリー",
         "search_keywords": ["ゴールフリー 講師 大阪市", "ゴールフリー 塾講師 バイト 大阪市 時給"],
         "recruitment_url": "https://www.goalfree.jp/",
-        "source_urls": ["https://www.juku.st/job/4193"],
+        "source_urls": [],  # job IDは失効するためPhase2のweb_searchに委ねる
     },
     {
         "name": "関西個別指導学院",

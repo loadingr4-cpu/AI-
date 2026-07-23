@@ -5,6 +5,7 @@ from pathlib import Path
 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
 SCOPES = ["https://www.googleapis.com/auth/drive.file"]
@@ -13,6 +14,8 @@ CREDENTIALS_PATH = Path(__file__).parent / "credentials.json"
 
 
 def _get_service():
+    if not CREDENTIALS_PATH.exists():
+        raise FileNotFoundError(f"credentials.json が見つかりません: {CREDENTIALS_PATH}")
     credentials = service_account.Credentials.from_service_account_file(
         str(CREDENTIALS_PATH), scopes=SCOPES
     )
@@ -23,42 +26,65 @@ def upload_report(report_path: Path) -> str:
     """
     HTMLレポートをGoogleドライブにアップロード。
     同名ファイルが既にあれば上書き、なければ新規作成。
-    Returns: 閲覧URL
+    Returns: 閲覧URL（失敗時は空文字）
     """
-    service = _get_service()
+    if not report_path.exists():
+        print(f"[Drive] エラー: レポートファイルが存在しません: {report_path}")
+        return ""
+
+    try:
+        service = _get_service()
+    except FileNotFoundError as e:
+        print(f"[Drive] 認証エラー: {e}")
+        return ""
+    except Exception as e:
+        print(f"[Drive] サービス初期化エラー: {e}")
+        return ""
+
     filename = report_path.name
 
-    # 同名ファイルが既存フォルダ内にあるか確認
-    query = f"name='{filename}' and '{FOLDER_ID}' in parents and trashed=false"
-    results = service.files().list(q=query, fields="files(id,name)").execute()
-    existing = results.get("files", [])
+    try:
+        query = f"name='{filename}' and '{FOLDER_ID}' in parents and trashed=false"
+        results = service.files().list(q=query, fields="files(id,name)").execute()
+        existing = results.get("files", [])
+    except HttpError as e:
+        print(f"[Drive] ファイル検索エラー (HTTP {e.status_code}): {e}")
+        return ""
+    except Exception as e:
+        print(f"[Drive] ファイル検索エラー: {e}")
+        return ""
 
     media = MediaFileUpload(str(report_path), mimetype="text/html", resumable=False)
 
-    if existing:
-        # 既存ファイルを上書き
-        file_id = existing[0]["id"]
-        updated = service.files().update(
-            fileId=file_id,
-            media_body=media,
-            fields="id,webViewLink",
-        ).execute()
-        link = updated.get("webViewLink", "")
-        print(f"Googleドライブを更新しました: {link}")
-    else:
-        # 新規アップロード
-        metadata = {
-            "name": filename,
-            "parents": [FOLDER_ID],
-            "mimeType": "text/html",
-        }
-        created = service.files().create(
-            body=metadata,
-            media_body=media,
-            fields="id,webViewLink",
-        ).execute()
-        link = created.get("webViewLink", "")
-        print(f"Googleドライブにアップロードしました: {link}")
+    try:
+        if existing:
+            file_id = existing[0]["id"]
+            updated = service.files().update(
+                fileId=file_id,
+                media_body=media,
+                fields="id,webViewLink",
+            ).execute()
+            link = updated.get("webViewLink", "")
+            print(f"Googleドライブを更新しました: {link}")
+        else:
+            metadata = {
+                "name": filename,
+                "parents": [FOLDER_ID],
+                "mimeType": "text/html",
+            }
+            created = service.files().create(
+                body=metadata,
+                media_body=media,
+                fields="id,webViewLink",
+            ).execute()
+            link = created.get("webViewLink", "")
+            print(f"Googleドライブにアップロードしました: {link}")
+    except HttpError as e:
+        print(f"[Drive] アップロードエラー (HTTP {e.status_code}): {e}")
+        return ""
+    except Exception as e:
+        print(f"[Drive] アップロードエラー: {e}")
+        return ""
 
     return link
 
